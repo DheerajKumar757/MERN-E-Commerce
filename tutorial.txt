@@ -1,0 +1,10 @@
+
+To run a the react project :
+npm start
+
+To install react-router-dom library :
+npm install react-router-dom
+
+To create a react app :
+npx create-react-app .
+
