@@ -1,4 +1,11 @@
 
+
+* {
+  margin: 0;
+  border: 1px dashed green;
+}
+
+
 To run a the react project :
 npm start
 
