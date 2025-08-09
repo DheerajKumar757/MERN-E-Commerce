@@ -1,4 +1,6 @@
 
+To give access to run commands in powershell :
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 * {
   margin: 0;
