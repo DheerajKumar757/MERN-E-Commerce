@@ -1,3 +1,10 @@
+Making the site Responsive :
+Add Media queries for four resolutions ->
+1280px
+1024px
+800px
+500px
+
 
 To give access to run commands in powershell :
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
