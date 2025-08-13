@@ -1,3 +1,21 @@
+
+To create the backend 
+npm init
+install express
+npm install express
+
+
+similarly install all the dependencies one by one.
+
+"dependencies": {
+  "cors": "^2.8.5",
+  "express": "^5.1.0",
+  "jsonwebtoken": "^9.0.2",
+  "mongoose": "^8.17.1",
+  "multer": "^2.0.2"
+}
+
+
 Making the site Responsive :
 Add Media queries for four resolutions ->
 1280px
