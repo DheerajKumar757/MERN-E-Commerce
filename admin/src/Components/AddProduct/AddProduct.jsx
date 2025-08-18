@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Addproduct.css'
+import './AddProduct.css'
 import upload_area from '../../assets/upload_area.png'
 
 const Addproduct = () => {
