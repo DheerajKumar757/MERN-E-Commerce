@@ -1,4 +1,9 @@
 
+frontend: npm start
+backend: node index.js
+admin: npm run dev
+
+
 To create the backend 
 npm init
 install express
