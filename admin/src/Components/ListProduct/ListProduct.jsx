@@ -5,6 +5,7 @@ import remove_icon from '../../assets/remove_icon.png'
 const ListProduct = () => {
 
   const [allproducts, setAllProducts] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   const fetchInfo = async () => {
     await fetch('http://localhost:4000/allproducts')
@@ -28,20 +29,34 @@ const ListProduct = () => {
     await fetchInfo();
   }
 
+  const filteredProducts = allproducts.filter(product =>
+    product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    product.category.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className='list-product'>
       <h1>All Products List</h1>
+      <div className="listproduct-search">
+        <input
+          type="text"
+          placeholder="Search products..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="listproduct-search-input"
+        />
+      </div>
       <div className="listproduct-format-main">
-        <p>Product</p>
+        <p>Image</p>
         <p>Title</p>
-        <p>Old Price</p>
-        <p>New Price</p>
+        <p>Old</p>
+        <p>New</p>
         <p>Category</p>
         <p>Remove</p>
       </div>
       <div className="listproduct-allproducts">
         <hr />
-        {allproducts.map((product, index)=>{
+        {filteredProducts.map((product, index)=>{
           return  <>
           <div key={index} className="listproduct-format-main listproduct-format">
             <img src={product.image} alt="" className="listproduct-product-icon" />
